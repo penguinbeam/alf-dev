@@ -1,7 +1,7 @@
 FROM centos:latest
 MAINTAINER penguinbeam
 WORKDIR /opt/myalfresco
-RUN yum -y upgrade && yum install -y java-1.8.0-openjdk wget
+RUN yum -y upgrade && yum install -y java-1.8.0-openjdk-devel wget
 RUN wget http://mirror.ox.ac.uk/sites/rsync.apache.org/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz -O /opt/apache-maven-3.3.9-bin.tar.gz
 RUN wget http://repo.spring.io/release/org/springframework/springloaded/1.2.5.RELEASE/springloaded-1.2.5.RELEASE.jar -O /opt/springloaded-1.2.5.RELEASE.jar
 RUN tar -xzf /opt/apache-maven-3.3.9-bin.tar.gz -C /usr/local
